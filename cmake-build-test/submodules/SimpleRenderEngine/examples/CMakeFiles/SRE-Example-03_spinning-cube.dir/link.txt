@@ -1,0 +1,1 @@
+/usr/bin/c++ "CMakeFiles/SRE-Example-03_spinning-cube.dir/03_spinning-cube.cpp.o" -o SRE-Example-03_spinning-cube  ../src/libSRE.a /usr/lib/libGL.so /usr/lib/libGLU.so /lib/libGLEW.so /usr/lib/libSDL2main.a /usr/lib/libSDL2.so /usr/lib/libSDL2_image.so 

@@ -1,0 +1,1 @@
+/usr/bin/c++ "CMakeFiles/SRE-Example-12_render-to-texture.dir/12_render-to-texture.cpp.o" -o SRE-Example-12_render-to-texture  ../src/libSRE.a /usr/lib/libGL.so /usr/lib/libGLU.so /lib/libGLEW.so /usr/lib/libSDL2main.a /usr/lib/libSDL2.so /usr/lib/libSDL2_image.so 

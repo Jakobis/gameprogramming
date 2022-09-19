@@ -1,0 +1,1 @@
+/usr/bin/c++ "CMakeFiles/SRE-Example-14_spinning-primitives-openvr.dir/14_spinning-primitives-openvr.cpp.o" -o SRE-Example-14_spinning-primitives-openvr  ../src/libSRE.a /usr/lib/libGL.so /usr/lib/libGLU.so /lib/libGLEW.so /usr/lib/libSDL2main.a /usr/lib/libSDL2.so /usr/lib/libSDL2_image.so 

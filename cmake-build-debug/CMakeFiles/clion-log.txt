@@ -1,0 +1,513 @@
+/home/jakobis/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/home/jakobis/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/bin/ninja/linux/ninja -G Ninja -S /home/jakobis/CLionProjects/SimpleRenderEngineproject -B /home/jakobis/CLionProjects/SimpleRenderEngineproject/cmake-build-debug
+<FindSDL2.cmake>
+</FindSDL2.cmake>
+CMake Warning (dev) at /home/jakobis/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/bin/cmake/linux/share/cmake-3.23/Modules/FindOpenGL.cmake:315 (message):
+  Policy CMP0072 is not set: FindOpenGL prefers GLVND by default when
+  available.  Run "cmake --help-policy CMP0072" for policy details.  Use the
+  cmake_policy command to set the policy and suppress this warning.
+
+  FindOpenGL found both a legacy GL library:
+
+    OPENGL_gl_LIBRARY: /usr/lib/libGL.so
+
+  and GLVND libraries for OpenGL and GLX:
+
+    OPENGL_opengl_LIBRARY: /usr/lib/libOpenGL.so
+    OPENGL_glx_LIBRARY: /usr/lib/libGLX.so
+
+  OpenGL_GL_PREFERENCE has not been set to "GLVND" or "LEGACY", so for
+  compatibility with CMake 3.10 and below the legacy GL library will be used.
+Call Stack (most recent call first):
+  CMakeLists.txt:32 (find_package)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+<FindSDL2_image.cmake>
+CMake Warning (dev) at /home/jakobis/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/bin/cmake/linux/share/cmake-3.23/Modules/FindPackageHandleStandardArgs.cmake:438 (message):
+  The package name passed to `find_package_handle_standard_args` (SDL2_image)
+  does not match the name of the calling package (SDL2_IMAGE).  This can lead
+  to problems in calling code that expects `find_package` result variables
+  (e.g., `_FOUND`) to follow a certain pattern.
+Call Stack (most recent call first):
+  cmake/FindSDL2_IMAGE.cmake:93 (FIND_PACKAGE_HANDLE_STANDARD_ARGS)
+  CMakeLists.txt:48 (find_package)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Could NOT find SDL2_image (missing: SDL2_IMAGE_LIBRARIES SDL2_IMAGE_INCLUDE_DIRS) (found version "..")
+</FindSDL2_image.cmake>
+<FindSDL2_mixer.cmake>
+</FindSDL2_mixer.cmake>
+<FindSDL2.cmake>
+</FindSDL2.cmake>
+<FindSDL2_image.cmake>
+CMake Warning (dev) at /home/jakobis/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/bin/cmake/linux/share/cmake-3.23/Modules/FindPackageHandleStandardArgs.cmake:438 (message):
+  The package name passed to `find_package_handle_standard_args` (SDL2_image)
+  does not match the name of the calling package (SDL2_IMAGE).  This can lead
+  to problems in calling code that expects `find_package` result variables
+  (e.g., `_FOUND`) to follow a certain pattern.
+Call Stack (most recent call first):
+  cmake/FindSDL2_IMAGE.cmake:93 (FIND_PACKAGE_HANDLE_STANDARD_ARGS)
+  submodules/SimpleRenderEngine/CMakeLists.txt:44 (find_package)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Could NOT find SDL2_image (missing: SDL2_IMAGE_LIBRARIES SDL2_IMAGE_INCLUDE_DIRS) (found version "..")
+</FindSDL2_image.cmake>
+-- Configuring done
+CMake Error: The following variables are used in this project, but they are set to NOTFOUND.
+Please set them or make sure they are set and tested correctly in the CMake files:
+SDL2_IMAGE_INCLUDE_DIR (ADVANCED)
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/submodules
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/submodules
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/submodules
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/submodules
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/submodules
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/submodules
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/src
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/src
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/src
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/src
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/src
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/src
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/src
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/src
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/src
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/src
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/src
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/src
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/src
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/src
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/examples
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/examples
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/examples
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/examples
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/examples
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/examples
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/examples
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/examples
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/examples
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/examples
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/examples
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/examples
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/examples
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/examples
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/examples
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/examples
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/examples
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/examples
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/examples
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/examples
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/examples
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/examples
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/examples
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/examples
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/examples
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/examples
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/examples
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/examples
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/examples
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/examples
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/examples
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/examples
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/examples
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/examples
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/examples
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/examples
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/examples
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/examples
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/examples
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/examples
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/examples
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/examples
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/examples
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/examples
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/examples
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/examples
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/examples
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/examples
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project/Box2DTestbed
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project/Box2DTestbed
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project/Box2DTestbed
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project/Box2DTestbed
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project/Box2DTestbed
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project/Box2DTestbed
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project/Box2DTestbed
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project/Box2DTestbed
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project/Box2DTestbed
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project/Box2DTestbed
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project/Box2DTestbed
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project/Box2DTestbed
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project/Box2DTestbed
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project/Box2DTestbed
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project/platformer
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project/platformer
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project/platformer
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project/platformer
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project/platformer
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project/platformer
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project/platformer
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project/platformer
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project/platformer
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project/platformer
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project/platformer
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project/platformer
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project/platformer
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project/platformer
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project/particle_system
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project/particle_system
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project/particle_system
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project/particle_system
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project/particle_system
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project/particle_system
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project/particle_system
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project/particle_system
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project/particle_system
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project/particle_system
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project/particle_system
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project/particle_system
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project/particle_system
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project/particle_system
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project/gui
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project/gui
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project/gui
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project/gui
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project/gui
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project/gui
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project/gui
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project/gui
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project/gui
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project/gui
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project/gui
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project/gui
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project/gui
+   used as include directory in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project/gui
+SDL2_IMAGE_LIBRARY (ADVANCED)
+    linked by target "SRE" in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/src
+    linked by target "SRE-Example-09_picking" in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/examples
+    linked by target "SRE-Example-07_matcap" in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/examples
+    linked by target "SRE-Example-06_custom-mesh-layout" in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/examples
+    linked by target "SRE-Example-17_deferred-shading" in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/examples
+    linked by target "SRE-Example-08_gui" in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/examples
+    linked by target "SRE-Example-04_spinning-primitives-tex" in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/examples
+    linked by target "SRE-Example-00_hello-engine" in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/examples
+    linked by target "SRE-Example-01_hello-engine-raw" in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/examples
+    linked by target "SRE-Example-05_obj-viewer" in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/examples
+    linked by target "SRE-Example-16_shadows" in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/examples
+    linked by target "SRE-Example-02_spheres" in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/examples
+    linked by target "SRE-Example-10_skybox-example" in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/examples
+    linked by target "SRE-Example-11_sprite-example" in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/examples
+    linked by target "SRE-Example-13_benchmark64k" in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/examples
+    linked by target "SRE-Example-14_spinning-primitives-openvr" in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/examples
+    linked by target "SRE-Example-03_spinning-cube" in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/examples
+    linked by target "SRE-Example-12_render-to-texture" in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/examples
+    linked by target "SRE-Example-15_cloth_simulation" in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/examples
+    linked by target "SRE-project" in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project
+    linked by target "SRE-box2d-platform-example" in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project
+    linked by target "SRE-box2d-example" in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project
+    linked by target "SRE-lua-example" in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project
+    linked by target "SRE-node-editor" in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project
+    linked by target "SRE-scene-graph" in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project
+    linked by target "SRE-lua-example-lines" in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project
+    linked by target "SRE-sdl2_mixer-example" in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project
+    linked by target "SRE-box2d-Testbed" in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project/Box2DTestbed
+    linked by target "SRE-Platformer" in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project/platformer
+    linked by target "SRE-ParticleSystem" in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project/particle_system
+    linked by target "SRE-Gui" in directory /home/jakobis/CLionProjects/SimpleRenderEngineproject/project/gui
+
+CMake Error in submodules/SimpleRenderEngine/src/CMakeLists.txt:
+  Found relative path while evaluating include directories of "SRE":
+
+    "SDL2_IMAGE_INCLUDE_DIR-NOTFOUND"
+
+
+
+CMake Error in submodules/SimpleRenderEngine/examples/CMakeLists.txt:
+  Found relative path while evaluating include directories of
+  "SRE-Example-00_hello-engine":
+
+    "SDL2_IMAGE_INCLUDE_DIR-NOTFOUND"
+
+
+
+CMake Error in submodules/SimpleRenderEngine/examples/CMakeLists.txt:
+  Found relative path while evaluating include directories of
+  "SRE-Example-01_hello-engine-raw":
+
+    "SDL2_IMAGE_INCLUDE_DIR-NOTFOUND"
+
+
+
+CMake Error in submodules/SimpleRenderEngine/examples/CMakeLists.txt:
+  Found relative path while evaluating include directories of
+  "SRE-Example-02_spheres":
+
+    "SDL2_IMAGE_INCLUDE_DIR-NOTFOUND"
+
+
+
+CMake Error in submodules/SimpleRenderEngine/examples/CMakeLists.txt:
+  Found relative path while evaluating include directories of
+  "SRE-Example-03_spinning-cube":
+
+    "SDL2_IMAGE_INCLUDE_DIR-NOTFOUND"
+
+
+
+CMake Error in submodules/SimpleRenderEngine/examples/CMakeLists.txt:
+  Found relative path while evaluating include directories of
+  "SRE-Example-04_spinning-primitives-tex":
+
+    "SDL2_IMAGE_INCLUDE_DIR-NOTFOUND"
+
+
+
+CMake Error in submodules/SimpleRenderEngine/examples/CMakeLists.txt:
+  Found relative path while evaluating include directories of
+  "SRE-Example-05_obj-viewer":
+
+    "SDL2_IMAGE_INCLUDE_DIR-NOTFOUND"
+
+
+
+CMake Error in submodules/SimpleRenderEngine/examples/CMakeLists.txt:
+  Found relative path while evaluating include directories of
+  "SRE-Example-06_custom-mesh-layout":
+
+    "SDL2_IMAGE_INCLUDE_DIR-NOTFOUND"
+
+
+
+CMake Error in submodules/SimpleRenderEngine/examples/CMakeLists.txt:
+  Found relative path while evaluating include directories of
+  "SRE-Example-07_matcap":
+
+    "SDL2_IMAGE_INCLUDE_DIR-NOTFOUND"
+
+
+
+CMake Error in submodules/SimpleRenderEngine/examples/CMakeLists.txt:
+  Found relative path while evaluating include directories of
+  "SRE-Example-08_gui":
+
+    "SDL2_IMAGE_INCLUDE_DIR-NOTFOUND"
+
+
+
+CMake Error in submodules/SimpleRenderEngine/examples/CMakeLists.txt:
+  Found relative path while evaluating include directories of
+  "SRE-Example-09_picking":
+
+    "SDL2_IMAGE_INCLUDE_DIR-NOTFOUND"
+
+
+
+CMake Error in submodules/SimpleRenderEngine/examples/CMakeLists.txt:
+  Found relative path while evaluating include directories of
+  "SRE-Example-10_skybox-example":
+
+    "SDL2_IMAGE_INCLUDE_DIR-NOTFOUND"
+
+
+
+CMake Error in submodules/SimpleRenderEngine/examples/CMakeLists.txt:
+  Found relative path while evaluating include directories of
+  "SRE-Example-11_sprite-example":
+
+    "SDL2_IMAGE_INCLUDE_DIR-NOTFOUND"
+
+
+
+CMake Error in submodules/SimpleRenderEngine/examples/CMakeLists.txt:
+  Found relative path while evaluating include directories of
+  "SRE-Example-12_render-to-texture":
+
+    "SDL2_IMAGE_INCLUDE_DIR-NOTFOUND"
+
+
+
+CMake Error in submodules/SimpleRenderEngine/examples/CMakeLists.txt:
+  Found relative path while evaluating include directories of
+  "SRE-Example-13_benchmark64k":
+
+    "SDL2_IMAGE_INCLUDE_DIR-NOTFOUND"
+
+
+
+CMake Error in submodules/SimpleRenderEngine/examples/CMakeLists.txt:
+  Found relative path while evaluating include directories of
+  "SRE-Example-14_spinning-primitives-openvr":
+
+    "SDL2_IMAGE_INCLUDE_DIR-NOTFOUND"
+
+
+
+CMake Error in submodules/SimpleRenderEngine/examples/CMakeLists.txt:
+  Found relative path while evaluating include directories of
+  "SRE-Example-15_cloth_simulation":
+
+    "SDL2_IMAGE_INCLUDE_DIR-NOTFOUND"
+
+
+
+CMake Error in submodules/SimpleRenderEngine/examples/CMakeLists.txt:
+  Found relative path while evaluating include directories of
+  "SRE-Example-16_shadows":
+
+    "SDL2_IMAGE_INCLUDE_DIR-NOTFOUND"
+
+
+
+CMake Error in submodules/SimpleRenderEngine/examples/CMakeLists.txt:
+  Found relative path while evaluating include directories of
+  "SRE-Example-17_deferred-shading":
+
+    "SDL2_IMAGE_INCLUDE_DIR-NOTFOUND"
+
+
+
+CMake Error in project/CMakeLists.txt:
+  Found relative path while evaluating include directories of
+  "SRE-node-editor":
+
+    "SDL2_IMAGE_INCLUDE_DIR-NOTFOUND"
+
+
+
+CMake Error in project/CMakeLists.txt:
+  Found relative path while evaluating include directories of
+  "SRE-box2d-example":
+
+    "SDL2_IMAGE_INCLUDE_DIR-NOTFOUND"
+
+
+
+CMake Error in project/CMakeLists.txt:
+  Found relative path while evaluating include directories of
+  "SRE-box2d-platform-example":
+
+    "SDL2_IMAGE_INCLUDE_DIR-NOTFOUND"
+
+
+
+CMake Error in project/CMakeLists.txt:
+  Found relative path while evaluating include directories of "SRE-project":
+
+    "SDL2_IMAGE_INCLUDE_DIR-NOTFOUND"
+
+
+
+CMake Error in project/CMakeLists.txt:
+  Found relative path while evaluating include directories of
+  "SRE-sdl2_mixer-example":
+
+    "SDL2_IMAGE_INCLUDE_DIR-NOTFOUND"
+
+
+
+CMake Error in project/CMakeLists.txt:
+  Found relative path while evaluating include directories of
+  "SRE-lua-example":
+
+    "SDL2_IMAGE_INCLUDE_DIR-NOTFOUND"
+
+
+
+CMake Error in project/CMakeLists.txt:
+  Found relative path while evaluating include directories of
+  "SRE-lua-example-lines":
+
+    "SDL2_IMAGE_INCLUDE_DIR-NOTFOUND"
+
+
+
+CMake Error in project/CMakeLists.txt:
+  Found relative path while evaluating include directories of
+  "SRE-scene-graph":
+
+    "SDL2_IMAGE_INCLUDE_DIR-NOTFOUND"
+
+
+
+CMake Error in project/Box2DTestbed/CMakeLists.txt:
+  Found relative path while evaluating include directories of
+  "SRE-box2d-Testbed":
+
+    "SDL2_IMAGE_INCLUDE_DIR-NOTFOUND"
+
+
+
+CMake Error in project/platformer/CMakeLists.txt:
+  Found relative path while evaluating include directories of
+  "SRE-Platformer":
+
+    "SDL2_IMAGE_INCLUDE_DIR-NOTFOUND"
+
+
+
+CMake Error in project/particle_system/CMakeLists.txt:
+  Found relative path while evaluating include directories of
+  "SRE-ParticleSystem":
+
+    "SDL2_IMAGE_INCLUDE_DIR-NOTFOUND"
+
+
+
+CMake Error in project/gui/CMakeLists.txt:
+  Found relative path while evaluating include directories of "SRE-Gui":
+
+    "SDL2_IMAGE_INCLUDE_DIR-NOTFOUND"
+
+
+
+-- Generating done
+CMake Generate step failed.  Build files cannot be regenerated correctly.

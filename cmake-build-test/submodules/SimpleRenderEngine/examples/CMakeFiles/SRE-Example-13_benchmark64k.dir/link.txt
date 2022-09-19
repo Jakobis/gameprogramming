@@ -1,0 +1,1 @@
+/usr/bin/c++ "CMakeFiles/SRE-Example-13_benchmark64k.dir/13_benchmark64k.cpp.o" -o SRE-Example-13_benchmark64k  ../src/libSRE.a /usr/lib/libGL.so /usr/lib/libGLU.so /lib/libGLEW.so /usr/lib/libSDL2main.a /usr/lib/libSDL2.so /usr/lib/libSDL2_image.so 
