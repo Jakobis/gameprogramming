@@ -61,4 +61,7 @@ void SpaceShip::onKey(SDL_Event &keyEvent) {
     if (keyEvent.key.keysym.sym == SDLK_RIGHT){
         rotateCW = keyEvent.type == SDL_KEYDOWN;
     }
+    if (keyEvent.key.keysym.sym == SDLK_SPACE) {
+        shooting = keyEvent.type == SDL_KEYDOWN;
+    }
 }

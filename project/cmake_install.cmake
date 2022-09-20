@@ -48,6 +48,8 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/jakobis/CLionProjects/SimpleRenderEngineproject/project/platformer/cmake_install.cmake")
   include("/home/jakobis/CLionProjects/SimpleRenderEngineproject/project/particle_system/cmake_install.cmake")
   include("/home/jakobis/CLionProjects/SimpleRenderEngineproject/project/gui/cmake_install.cmake")
+  include("/home/jakobis/CLionProjects/SimpleRenderEngineproject/project/Ex2_Cpp_Foundation/cmake_install.cmake")
+  include("/home/jakobis/CLionProjects/SimpleRenderEngineproject/project/Exercise3/cmake_install.cmake")
 
 endif()
 

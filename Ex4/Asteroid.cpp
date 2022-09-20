@@ -19,7 +19,7 @@ Asteroid::Asteroid(const sre::Sprite &sprite, asteroidSize size) : GameObject(sp
     winSize = sre::Renderer::instance->getDrawableSize();
     radius = 23;
     position = winSize * randFloat(0, 1);
-    velocity = glm::vec2(randFloat(-100f, 100f), randFloat(-100f, 100f));
+    velocity = glm::vec2(randFloat(-100.0f, 100.0f), randFloat(-100.0f, 100.0f));
 }
 
 void Asteroid::update(float deltaTime) {
@@ -27,10 +27,16 @@ void Asteroid::update(float deltaTime) {
     rotation += deltaTime * rotationSpeed;
 
     // wrap around
-    position.x += winSize.x;
-    position.x %= winSize.x;
-    position.y += winSize.y;
-    position.y %= winSize.y;
+    if (position.x < 0){
+        position.x += winSize.x;
+    } else if (position.x > winSize.x){
+        position.x -= winSize.x;
+    }
+    if (position.y < 0){
+        position.y += winSize.y;
+    } else if (position.y > winSize.y){
+        position.y -= winSize.y;
+    }
 }
 
 void Asteroid::onCollision(std::shared_ptr<GameObject> other) {

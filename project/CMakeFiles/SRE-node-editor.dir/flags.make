@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/usr/include/SDL2 -I/home/jakobis/CLionProjects/SimpleRenderEngineproject/thirdparty/Linux/Box2D/include -I/usr/include/lua5.3 -I/home/jakobis/CLionProjects/SimpleRenderEngineproject/thirdparty/All/include -I/home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/include -I/home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/submodules/ImGuiColorTextEdit -I/home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/submodules/imgui -I/home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/submodules/glm -I/home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/submodules/picojson
 
-CXX_FLAGS = -std=c++14
+CXX_FLAGS = -std=c++17
 

@@ -6,8 +6,8 @@
 #include <glm/gtc/constants.hpp>
 #include "AsteroidsGame.hpp"
 #include "GameObject.hpp"
-#include "SpaceShip.hpp"
 #include "Asteroid.hpp"
+#include "Laser.hpp"
 
 
 using namespace sre;
@@ -21,10 +21,11 @@ AsteroidsGame::AsteroidsGame() {
     time_t t;                                               // random seed based on time
     srand((unsigned) time(&t));
 
-    atlas = SpriteAtlas::create("asteroids.json","asteroids.png");
+    atlas = SpriteAtlas::create("/home/jakobis/CLionProjects/SimpleRenderEngineproject/Ex4/asteroids.json","/home/jakobis/CLionProjects/SimpleRenderEngineproject/Ex4/asteroids.png");
 
     auto spaceshipSprite = atlas->get("playerShip1_blue.png");
-    gameObjects.push_back(std::make_shared<SpaceShip>(spaceshipSprite));
+    spaceShip = std::make_shared<SpaceShip>(spaceshipSprite);
+    gameObjects.push_back(spaceShip);
     auto asteroidSpriteLarge = atlas->get("Meteors/meteorBrown_big1.png");
     auto asteroidSpriteMedium = atlas->get("Meteors/meteorBrown_med1.png");
     auto asteroidSpriteSmall = atlas->get("Meteors/meteorBrown_tiny1.png");
@@ -55,6 +56,11 @@ void AsteroidsGame::update(float deltaTime) {
 	for (int i = 0; i < gameObjects.size();i++) {
 		gameObjects[i]->update(deltaTime);
     }
+    if (spaceShip->shooting) {
+        //gameObjects.push_back(std::make_shared<Laser>(atlas->get("Lasers/laserRed02.png"), spaceShip->position, spaceShip->rotation, spaceShip->velocity));
+        //gameObjects.push_back(std::make_shared<Laser>(atlas->get("Lasers/laserRed02.png")));
+    };
+
 }
 
 void drawCircle(std::vector<glm::vec3>& lines, glm::vec2 position, float radius){

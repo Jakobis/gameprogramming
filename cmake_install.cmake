@@ -46,6 +46,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/jakobis/CLionProjects/SimpleRenderEngineproject/submodules/SimpleRenderEngine/cmake_install.cmake")
   include("/home/jakobis/CLionProjects/SimpleRenderEngineproject/project/cmake_install.cmake")
+  include("/home/jakobis/CLionProjects/SimpleRenderEngineproject/Ex4/cmake_install.cmake")
 
 endif()
 

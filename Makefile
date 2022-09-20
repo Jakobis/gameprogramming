@@ -567,6 +567,84 @@ SRE-Gui/fast:
 	$(MAKE) $(MAKESILENT) -f project/gui/CMakeFiles/SRE-Gui.dir/build.make project/gui/CMakeFiles/SRE-Gui.dir/build
 .PHONY : SRE-Gui/fast
 
+#=============================================================================
+# Target rules for targets named Exercise2-1
+
+# Build rule for target.
+Exercise2-1: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Exercise2-1
+.PHONY : Exercise2-1
+
+# fast build rule for target.
+Exercise2-1/fast:
+	$(MAKE) $(MAKESILENT) -f project/Ex2_Cpp_Foundation/CMakeFiles/Exercise2-1.dir/build.make project/Ex2_Cpp_Foundation/CMakeFiles/Exercise2-1.dir/build
+.PHONY : Exercise2-1/fast
+
+#=============================================================================
+# Target rules for targets named Exercise2-2
+
+# Build rule for target.
+Exercise2-2: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Exercise2-2
+.PHONY : Exercise2-2
+
+# fast build rule for target.
+Exercise2-2/fast:
+	$(MAKE) $(MAKESILENT) -f project/Ex2_Cpp_Foundation/CMakeFiles/Exercise2-2.dir/build.make project/Ex2_Cpp_Foundation/CMakeFiles/Exercise2-2.dir/build
+.PHONY : Exercise2-2/fast
+
+#=============================================================================
+# Target rules for targets named Exercise2-3
+
+# Build rule for target.
+Exercise2-3: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Exercise2-3
+.PHONY : Exercise2-3
+
+# fast build rule for target.
+Exercise2-3/fast:
+	$(MAKE) $(MAKESILENT) -f project/Ex2_Cpp_Foundation/CMakeFiles/Exercise2-3.dir/build.make project/Ex2_Cpp_Foundation/CMakeFiles/Exercise2-3.dir/build
+.PHONY : Exercise2-3/fast
+
+#=============================================================================
+# Target rules for targets named Exercise2-3-GUI
+
+# Build rule for target.
+Exercise2-3-GUI: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Exercise2-3-GUI
+.PHONY : Exercise2-3-GUI
+
+# fast build rule for target.
+Exercise2-3-GUI/fast:
+	$(MAKE) $(MAKESILENT) -f project/Ex2_Cpp_Foundation/CMakeFiles/Exercise2-3-GUI.dir/build.make project/Ex2_Cpp_Foundation/CMakeFiles/Exercise2-3-GUI.dir/build
+.PHONY : Exercise2-3-GUI/fast
+
+#=============================================================================
+# Target rules for targets named Exercise3-Snake
+
+# Build rule for target.
+Exercise3-Snake: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Exercise3-Snake
+.PHONY : Exercise3-Snake
+
+# fast build rule for target.
+Exercise3-Snake/fast:
+	$(MAKE) $(MAKESILENT) -f project/Exercise3/CMakeFiles/Exercise3-Snake.dir/build.make project/Exercise3/CMakeFiles/Exercise3-Snake.dir/build
+.PHONY : Exercise3-Snake/fast
+
+#=============================================================================
+# Target rules for targets named Exercise4-Asteroids
+
+# Build rule for target.
+Exercise4-Asteroids: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Exercise4-Asteroids
+.PHONY : Exercise4-Asteroids
+
+# fast build rule for target.
+Exercise4-Asteroids/fast:
+	$(MAKE) $(MAKESILENT) -f Ex4/CMakeFiles/Exercise4-Asteroids.dir/build.make Ex4/CMakeFiles/Exercise4-Asteroids.dir/build
+.PHONY : Exercise4-Asteroids/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -579,6 +657,12 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... Exercise2-1"
+	@echo "... Exercise2-2"
+	@echo "... Exercise2-3"
+	@echo "... Exercise2-3-GUI"
+	@echo "... Exercise3-Snake"
+	@echo "... Exercise4-Asteroids"
 	@echo "... SRE"
 	@echo "... SRE-Example-00_hello-engine"
 	@echo "... SRE-Example-01_hello-engine-raw"

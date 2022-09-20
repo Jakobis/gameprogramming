@@ -3,6 +3,7 @@
 #include <vector>
 #include "sre/SDLRenderer.hpp"
 #include "sre/SpriteAtlas.hpp"
+#include "SpaceShip.hpp"
 
 class GameObject;
 
@@ -17,6 +18,7 @@ private:
     sre::Camera camera;
     sre::SDLRenderer r;
     std::shared_ptr<sre::SpriteAtlas> atlas;
+    std::shared_ptr<SpaceShip> spaceShip;
     std::vector<std::shared_ptr<GameObject>> gameObjects;
     bool debugCollisionCircles = false;
     int score = 0;

@@ -5,6 +5,8 @@
 
 class SpaceShip : public GameObject, public Collidable  {
 public:
+    bool shooting = false;
+
     SpaceShip(const sre::Sprite &sprite);
 
     void update(float deltaTime) override;
