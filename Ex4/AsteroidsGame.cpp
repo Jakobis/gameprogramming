@@ -58,7 +58,10 @@ void AsteroidsGame::update(float deltaTime) {
     }
     if (spaceShip->shooting) {
         //gameObjects.push_back(std::make_shared<Laser>(atlas->get("Lasers/laserRed02.png"), spaceShip->position, spaceShip->rotation, spaceShip->velocity));
-        //gameObjects.push_back(std::make_shared<Laser>(atlas->get("Lasers/laserRed02.png")));
+        
+        
+        gameObjects.push_back(std::make_shared<Laser>(atlas->get("Lasers/laserRed02.png"))); //this gives an undefined reference
+        //gameObjects.push_back(std::make_shared<Asteroid>(atlas->get("Meteors/meteorBrown_big1.png"), asteroidSize::large)); // this does not.
     };
 
 }
