@@ -16,6 +16,7 @@ SpaceShip::SpaceShip(const sre::Sprite &sprite) : GameObject(sprite) {
 }
 
 void SpaceShip::update(float deltaTime) {
+    remainingCooldown -= deltaTime;
     if (thrust){
         float acceleration = deltaTime*thrustPower;
         glm::vec2 direction = glm::rotateZ(glm::vec3(0,acceleration,0), glm::radians(rotation));
@@ -65,6 +66,10 @@ void SpaceShip::onKey(SDL_Event &keyEvent) {
         rotateCW = keyEvent.type == SDL_KEYDOWN;
     }
     if (keyEvent.key.keysym.sym == SDLK_SPACE) {
-        shooting = keyEvent.type == SDL_KEYDOWN;
+        if (keyEvent.type == SDL_KEYDOWN && remainingCooldown <= 0) {
+            shooting = true;
+            remainingCooldown = cooldown;
+        }
+        else shooting = false;
     }
 }

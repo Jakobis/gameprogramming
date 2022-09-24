@@ -144,7 +144,8 @@ void AsteroidsGame::update(float deltaTime) {
         }
     }
     if (spaceShip->shooting) {
-        gameObjects.push_back(std::make_shared<Laser>(atlas->get("Lasers/laserRed02.png"), spaceShip->position, spaceShip->velocity, spaceShip->rotation, deltaTime)); 
+        gameObjects.push_back(std::make_shared<Laser>(atlas->get("Lasers/laserRed02.png"), spaceShip->position, spaceShip->velocity, spaceShip->rotation, deltaTime));
+        spaceShip->shooting = false; 
     };
 
 }

@@ -24,6 +24,8 @@ private:
     float maxSpeed = 460.0f;
     float thrustPower = 600.0f;
     float rotationSpeed = 100.0f;
+    float cooldown = 1;
+    float remainingCooldown = 0;
     glm::vec2 winSize;
 };
 
