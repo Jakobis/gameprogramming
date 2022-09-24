@@ -4,6 +4,7 @@
 #include "sre/SDLRenderer.hpp"
 #include "sre/SpriteAtlas.hpp"
 #include "SpaceShip.hpp"
+#include "Asteroid.hpp"
 
 class GameObject;
 
@@ -14,6 +15,8 @@ private:
     void update(float deltaTime);
     void render();
     void keyEvent(SDL_Event &event);
+    void spawnAsteroid(asteroidSize size);
+    void spawnAsteroid(asteroidSize size, glm::vec2 position);
 
     sre::Camera camera;
     sre::SDLRenderer r;
@@ -22,6 +25,9 @@ private:
     std::vector<std::shared_ptr<GameObject>> gameObjects;
     bool debugCollisionCircles = false;
     int score = 0;
+    sre::Sprite asteroidSpriteLarge;
+    sre::Sprite asteroidSpriteMedium;
+    sre::Sprite asteroidSpriteSmall;
 };
 
 

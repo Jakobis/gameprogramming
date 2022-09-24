@@ -6,6 +6,7 @@
 #include "Laser.hpp"
 #include "sre/Renderer.hpp"
 #include <random>
+#include "Asteroid.hpp"
 
 Laser::Laser(const sre::Sprite &sprite, glm::vec2 &position, glm::vec2 &velocity, float rotation, float deltatime) : GameObject(sprite) {
     scale = glm::vec2(0.5f, 0.5f);
@@ -38,7 +39,7 @@ void Laser::update(float deltaTime) {
 }
 
 void Laser::onCollision(std::shared_ptr<GameObject> other) {
-    if (other) {
-
+    if (std::dynamic_pointer_cast<Asteroid>(other)) {
+        shouldDelete = true;
     };
 }

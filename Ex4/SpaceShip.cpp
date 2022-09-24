@@ -5,6 +5,7 @@
 #include <glm/gtx/rotate_vector.hpp>
 #include "SpaceShip.hpp"
 #include "sre/Renderer.hpp"
+#include "Asteroid.hpp"
 
 SpaceShip::SpaceShip(const sre::Sprite &sprite) : GameObject(sprite) {
     scale = glm::vec2(0.5f,0.5f);
@@ -48,7 +49,9 @@ void SpaceShip::update(float deltaTime) {
 }
 
 void SpaceShip::onCollision(std::shared_ptr<GameObject> other) {
-
+    if (std::dynamic_pointer_cast<Asteroid>(other)) {
+        
+    };
 }
 
 void SpaceShip::onKey(SDL_Event &keyEvent) {

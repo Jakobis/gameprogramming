@@ -6,6 +6,8 @@
 #include "Asteroid.hpp"
 #include "sre/Renderer.hpp"
 #include <random>
+#include "Laser.hpp"
+#include "SpaceShip.hpp"
 
 float randFloat(float start, float stop) {
     float r = static_cast <float> (rand()) / static_cast <float> (RAND_MAX);
@@ -14,12 +16,20 @@ float randFloat(float start, float stop) {
     return r;
 }
 
-Asteroid::Asteroid(const sre::Sprite &sprite, asteroidSize size) : GameObject(sprite) {
+Asteroid::Asteroid(const sre::Sprite &sprite, asteroidSize size, glm::vec2 position) : GameObject(sprite) {
     scale = glm::vec2(0.5f, 0.5f);
     winSize = sre::Renderer::instance->getDrawableSize();
     radius = 23;
-    position = winSize * randFloat(0, 1);
+    if (size == medium) {
+        radius = 16;
+    }
+    else if (size == small)
+    {
+        radius = 10;
+    }
+    this->position = position; //winSize * randFloat(0, 1);
     velocity = glm::vec2(randFloat(-100.0f, 100.0f), randFloat(-100.0f, 100.0f));
+    this->size = size;
 }
 
 void Asteroid::update(float deltaTime) {
@@ -40,5 +50,7 @@ void Asteroid::update(float deltaTime) {
 }
 
 void Asteroid::onCollision(std::shared_ptr<GameObject> other) {
-
+    if (std::dynamic_pointer_cast<Laser>(other)) {
+        shouldDelete = true;
+    };
 }

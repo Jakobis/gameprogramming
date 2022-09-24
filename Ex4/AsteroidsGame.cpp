@@ -12,6 +12,33 @@
 
 using namespace sre;
 
+float randFloat2(float start, float stop) {
+    float r = static_cast <float> (rand()) / static_cast <float> (RAND_MAX);
+    r *= stop - start;
+    r += start;
+    return r;
+}
+
+void AsteroidsGame::spawnAsteroid(asteroidSize size) {
+    glm::vec2 winSize = sre::Renderer::instance->getDrawableSize();
+    spawnAsteroid(size, winSize * randFloat2(0, 1));
+}
+
+void AsteroidsGame::spawnAsteroid(asteroidSize size, glm::vec2 position) {
+    switch (size)
+    {
+    case large:
+        gameObjects.push_back(std::make_shared<Asteroid>(asteroidSpriteLarge, asteroidSize::large, position));
+        break;
+    case medium:
+        gameObjects.push_back(std::make_shared<Asteroid>(asteroidSpriteMedium, asteroidSize::medium, position));
+        break;
+    case small:
+        gameObjects.push_back(std::make_shared<Asteroid>(asteroidSpriteMedium, asteroidSize::small, position));
+        break;
+    }
+}
+
 AsteroidsGame::AsteroidsGame() {
     r.setWindowTitle("Asteroids");
 
@@ -26,12 +53,12 @@ AsteroidsGame::AsteroidsGame() {
     auto spaceshipSprite = atlas->get("playerShip1_blue.png");
     spaceShip = std::make_shared<SpaceShip>(spaceshipSprite);
     gameObjects.push_back(spaceShip);
-    auto asteroidSpriteLarge = atlas->get("Meteors/meteorBrown_big1.png");
-    auto asteroidSpriteMedium = atlas->get("Meteors/meteorBrown_med1.png");
-    auto asteroidSpriteSmall = atlas->get("Meteors/meteorBrown_tiny1.png");
+    asteroidSpriteLarge = atlas->get("Meteors/meteorBrown_big1.png");
+    asteroidSpriteMedium = atlas->get("Meteors/meteorBrown_med1.png");
+    asteroidSpriteSmall = atlas->get("Meteors/meteorBrown_tiny1.png");
     for (size_t i = 0; i < 5; i++)
     {
-        gameObjects.push_back(std::make_shared<Asteroid>(asteroidSpriteLarge, asteroidSize::large));
+        spawnAsteroid(large);
     }
     
 
@@ -57,22 +84,49 @@ inline bool instanceof(const std::shared_ptr<T> ptr) {
    return std::dynamic_pointer_cast<Base>(ptr).use_count() > 0;
 }
 
-void AsteroidsGame::update(float deltaTime) {
+bool checkCollision(glm::vec2 pos1, float rad1, glm::vec2 pos2, float rad2) {
+    return glm::distance(pos1, pos2) <= rad1 + rad2;
+}
 
+
+
+void AsteroidsGame::update(float deltaTime) {
 	for (int i = 0; i < gameObjects.size();i++) {
 		auto gameObject = gameObjects[i];
         gameObject->update(deltaTime);
         if (instanceof<Collidable>(gameObject)) {
-            for (size_t j = 0; j < gameObjects.size(); j++)
+            for (size_t j = i + 1; j < gameObjects.size(); j++)
             {
-                if (i == j) continue;
                 auto other = gameObjects[j];
-                
+                if (instanceof<Collidable>(other)) {
+                    if (checkCollision(
+                        gameObject->position, 
+                        std::dynamic_pointer_cast<Collidable>(gameObject)->getRadius(),
+                        other->position,
+                        std::dynamic_pointer_cast<Collidable>(other)->getRadius())){
+                            std::dynamic_pointer_cast<Collidable>(gameObject)->onCollision(other);
+                            std::dynamic_pointer_cast<Collidable>(other)->onCollision(gameObject);
+                        }
+                }
             }
         }
         
 
-        if (gameObjects[i]->shouldDelete) {
+        if (gameObject->shouldDelete) {
+            if (instanceof<Asteroid>(gameObject)) {
+                auto as = std::dynamic_pointer_cast<Asteroid>(gameObject);
+                auto range = 100.0f;
+                auto newPosition = as->position + randFloat2(-range, range);
+                auto otherNewPosition = as->position + randFloat2(-range, range);
+                if (as->size == large) {
+                    spawnAsteroid(medium, newPosition);
+                    spawnAsteroid(medium, otherNewPosition);
+                }
+                if (as->size == medium) {
+                    spawnAsteroid(small, newPosition);
+                    spawnAsteroid(small, otherNewPosition);
+                }
+            }
             gameObjects.erase(gameObjects.begin() + i);
             i--;
         }
