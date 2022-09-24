@@ -7,24 +7,22 @@
 #include "sre/Renderer.hpp"
 #include <random>
 
-float randFloat(float start, float stop) {
-    float r = static_cast <float> (rand()) / static_cast <float> (RAND_MAX);
-    r *= stop - start;
-    r += start;
-    return r;
-}
-
-Laser::Laser(const sre::Sprite &sprite) : GameObject(sprite) {
+Laser::Laser(const sre::Sprite &sprite, glm::vec2 &position, glm::vec2 &velocity, float rotation, float deltatime) : GameObject(sprite) {
     scale = glm::vec2(0.5f, 0.5f);
     winSize = sre::Renderer::instance->getDrawableSize();
-    radius = 23;
-    position = winSize * randFloat(0, 1);
-    velocity = glm::vec2(randFloat(-100.0f, 100.0f), randFloat(-100.0f, 100.0f));
+    radius = 10;
+
+    float acceleration = 300;
+    this->position = position;
+    this->velocity = glm::rotateZ(glm::vec3(0,acceleration,0), glm::radians(rotation));
+    this->rotation = rotation;
+    starttime = 0;
 }
 
 void Laser::update(float deltaTime) {
     position += velocity * deltaTime;
-    rotation += deltaTime * rotationSpeed;
+    starttime += deltaTime;
+    if (starttime >= 1) shouldDelete = true;
 
     // wrap around
     if (position.x < 0){
@@ -40,5 +38,7 @@ void Laser::update(float deltaTime) {
 }
 
 void Laser::onCollision(std::shared_ptr<GameObject> other) {
+    if (other) {
 
+    };
 }

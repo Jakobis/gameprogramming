@@ -19,6 +19,6 @@ protected:
     glm::vec2 scale;
     sre::Sprite sprite;
     float rotation;
-
+    bool shouldDelete = false;
     friend class AsteroidsGame;
 };
