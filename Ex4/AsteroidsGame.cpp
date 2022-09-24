@@ -52,10 +52,26 @@ AsteroidsGame::AsteroidsGame() {
     r.startEventLoop();
 }
 
+template<typename Base, typename T>
+inline bool instanceof(const std::shared_ptr<T> ptr) {
+   return std::dynamic_pointer_cast<Base>(ptr).use_count() > 0;
+}
+
 void AsteroidsGame::update(float deltaTime) {
 
 	for (int i = 0; i < gameObjects.size();i++) {
-		gameObjects[i]->update(deltaTime);
+		auto gameObject = gameObjects[i];
+        gameObject->update(deltaTime);
+        if (instanceof<Collidable>(gameObject)) {
+            for (size_t j = 0; j < gameObjects.size(); j++)
+            {
+                if (i == j) continue;
+                auto other = gameObjects[j];
+                
+            }
+        }
+        
+
         if (gameObjects[i]->shouldDelete) {
             gameObjects.erase(gameObjects.begin() + i);
             i--;
