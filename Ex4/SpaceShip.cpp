@@ -50,7 +50,7 @@ void SpaceShip::update(float deltaTime) {
 
 void SpaceShip::onCollision(std::shared_ptr<GameObject> other) {
     if (std::dynamic_pointer_cast<Asteroid>(other)) {
-        
+        shouldDelete = true;
     };
 }
 

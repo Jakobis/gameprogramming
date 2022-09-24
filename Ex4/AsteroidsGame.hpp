@@ -17,6 +17,7 @@ private:
     void keyEvent(SDL_Event &event);
     void spawnAsteroid(asteroidSize size);
     void spawnAsteroid(asteroidSize size, glm::vec2 position);
+    void initialize();
 
     sre::Camera camera;
     sre::SDLRenderer r;
@@ -28,6 +29,7 @@ private:
     sre::Sprite asteroidSpriteLarge;
     sre::Sprite asteroidSpriteMedium;
     sre::Sprite asteroidSpriteSmall;
+    bool gameOver = false;
 };
 
 

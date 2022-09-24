@@ -21,7 +21,7 @@ float randFloat2(float start, float stop) {
 
 void AsteroidsGame::spawnAsteroid(asteroidSize size) {
     glm::vec2 winSize = sre::Renderer::instance->getDrawableSize();
-    spawnAsteroid(size, winSize * randFloat2(0, 1));
+    spawnAsteroid(size, winSize * glm::vec2(randFloat2(0, 1), randFloat2(0, 1)));
 }
 
 void AsteroidsGame::spawnAsteroid(asteroidSize size, glm::vec2 position) {
@@ -39,6 +39,21 @@ void AsteroidsGame::spawnAsteroid(asteroidSize size, glm::vec2 position) {
     }
 }
 
+void AsteroidsGame::initialize() {
+    gameObjects.clear();
+    gameOver = false;
+    auto spaceshipSprite = atlas->get("playerShip1_blue.png");
+    spaceShip = std::make_shared<SpaceShip>(spaceshipSprite);
+    gameObjects.push_back(spaceShip);
+    asteroidSpriteLarge = atlas->get("Meteors/meteorBrown_big1.png");
+    asteroidSpriteMedium = atlas->get("Meteors/meteorBrown_med1.png");
+    asteroidSpriteSmall = atlas->get("Meteors/meteorBrown_tiny1.png");
+    for (size_t i = 0; i < 5; i++)
+    {
+        spawnAsteroid(large);
+    }
+}
+
 AsteroidsGame::AsteroidsGame() {
     r.setWindowTitle("Asteroids");
 
@@ -50,17 +65,8 @@ AsteroidsGame::AsteroidsGame() {
 
     atlas = SpriteAtlas::create("/home/jakobis/CLionProjects/SimpleRenderEngineproject/Ex4/asteroids.json","/home/jakobis/CLionProjects/SimpleRenderEngineproject/Ex4/asteroids.png");
 
-    auto spaceshipSprite = atlas->get("playerShip1_blue.png");
-    spaceShip = std::make_shared<SpaceShip>(spaceshipSprite);
-    gameObjects.push_back(spaceShip);
-    asteroidSpriteLarge = atlas->get("Meteors/meteorBrown_big1.png");
-    asteroidSpriteMedium = atlas->get("Meteors/meteorBrown_med1.png");
-    asteroidSpriteSmall = atlas->get("Meteors/meteorBrown_tiny1.png");
-    for (size_t i = 0; i < 5; i++)
-    {
-        spawnAsteroid(large);
-    }
     
+    initialize();
 
     camera.setWindowCoordinates();
 
@@ -106,7 +112,7 @@ void AsteroidsGame::update(float deltaTime) {
                         std::dynamic_pointer_cast<Collidable>(other)->getRadius())){
                             std::dynamic_pointer_cast<Collidable>(gameObject)->onCollision(other);
                             std::dynamic_pointer_cast<Collidable>(other)->onCollision(gameObject);
-                        }
+                    }
                 }
             }
         }
@@ -127,6 +133,12 @@ void AsteroidsGame::update(float deltaTime) {
                     spawnAsteroid(small, otherNewPosition);
                 }
             }
+            else if (instanceof<SpaceShip>(gameObject))
+            {
+                gameObjects.push_back(std::make_shared<GameObject>(atlas->get("bang.png"), gameObject->position));
+                gameOver = true;
+            }
+            
             gameObjects.erase(gameObjects.begin() + i);
             i--;
         }
@@ -191,6 +203,11 @@ void AsteroidsGame::keyEvent(SDL_Event &event) {
     }
     if (event.type == SDL_KEYDOWN && event.key.keysym.sym == SDLK_d){
         debugCollisionCircles = !debugCollisionCircles;
+    }
+    if (event.type == SDL_KEYDOWN && event.key.keysym.sym == SDLK_SPACE){
+        if (gameOver) {
+            initialize();
+        }
     }
 }
 

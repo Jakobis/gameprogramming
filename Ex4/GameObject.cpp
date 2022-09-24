@@ -4,14 +4,22 @@
 
 #include "GameObject.hpp"
 
-GameObject::GameObject(sre::Sprite sprite)
-:position(0,0),
- rotation(0),
+GameObject::GameObject(sre::Sprite sprite, glm::vec2 position)
+:rotation(0),
  scale(1,1),
  sprite(sprite)
 {
+    this->position = position;
 }
 
+GameObject::GameObject(sre::Sprite sprite)
+:rotation(0),
+ position(0.0f, 0.0f),
+ scale(1,1),
+ sprite(sprite)
+{
+    this->position = position;
+}
 GameObject::~GameObject(){
 }
 

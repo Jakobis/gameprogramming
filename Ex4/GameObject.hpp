@@ -7,6 +7,7 @@
 
 class GameObject {
 public:
+    explicit GameObject(sre::Sprite sprite, glm::vec2 position);
     explicit GameObject(sre::Sprite sprite);
     virtual ~GameObject();
     virtual void render(sre::SpriteBatch::SpriteBatchBuilder& spriteBatchBuilder);
