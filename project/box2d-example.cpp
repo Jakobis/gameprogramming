@@ -88,6 +88,20 @@ public:
         boxFixtureDef.density = 1;
         m_groundBody->CreateFixture(&boxFixtureDef);
 
+        b2BodyDef myBodyDef2;                                                        // Setup phys
+        myBodyDef2.type = b2_staticBody; //this will be a static body (does not move)
+        myBodyDef2.position.Set(0, 0); //set the starting position
+        auto m_groundBody2 = m_world.CreateBody(&myBodyDef2);
+
+        b2PolygonShape boxShape2;
+        boxShape2.SetAsBox(1,10000);
+
+        b2FixtureDef boxFixtureDef2;
+        boxFixtureDef2.shape = &boxShape2;
+        boxFixtureDef2.density = 1;
+        m_groundBody2->CreateFixture(&boxFixtureDef2);
+
+
         r.frameUpdate = [&](float deltaTime){                                       // Update physics simulation before rendering
             float fixedDeltaTime = 0.016f;
             int32 velocityIterations = 8;                                           //how strongly to correct velocity
